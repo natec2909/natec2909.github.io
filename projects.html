@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nate Chao | Projects</title>
+
+  <style>
+    :root{--bg:#0f172a;--panel:rgba(255,255,255,.06);--border:rgba(255,255,255,.12);--text:#e5e7eb;--muted:#9ca3af;--accent:#38bdf8;--radius:16px;--shadow:0 20px 60px rgba(0,0,0,.35)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1100px,92%);margin:auto}
+    .topbar{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(15,23,42,.72);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{font-weight:800}
+    .links a{margin-left:18px;color:var(--muted);padding:8px 10px;border-radius:10px;transition:.18s}
+    .links a:hover{color:var(--text);background:rgba(255,255,255,.06);transform:translateY(-1px)}
+    .page{padding:70px 0}
+    .panel{border:1px solid var(--border);background:rgba(255,255,255,.06);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    h1{margin:0 0 8px;font-size:38px}
+    p{margin:0;color:var(--muted);line-height:1.7}
+    .proj{margin-top:18px;border-top:1px solid var(--border);padding-top:18px}
+    .proj h2{margin:0 0 8px;font-size:20px}
+    .meta{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 12px}
+    .tag{padding:8px 12px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.05);color:var(--muted)}
+    ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:14px}
+    .gallery img{width:100%;height:190px;object-fit:cover;border-radius:14px;border:1px solid var(--border);background:rgba(255,255,255,.04);transition:transform .25s ease}
+    .gallery img:hover{transform:scale(1.03)}
+    .placeholder{border:1px dashed rgba(255,255,255,.22);border-radius:14px;padding:16px;color:var(--muted);background:rgba(255,255,255,.03);margin-top:14px}
+    footer{border-top:1px solid var(--border);padding:30px 0;margin-top:70px;color:var(--muted)}
+    footer a{color:#cfefff}
+    footer a:hover{text-decoration:underline}
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">Nate Chao</div>
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <div class="panel">
+      <h1>Projects</h1>
+      <p>Selected projects across programming, engineering builds, and design.</p>
+
+      <!-- Project 1 -->
+      <section class="proj">
+        <h2>Pygame 1v1 Fighting Game</h2>
+        <div class="meta">
+          <span class="tag">Tools: Python</span>
+          <span class="tag">Tools: Pygame</span>
+        </div>
+        <p style="margin-bottom:10px;color:var(--muted);">
+          What it is: A two-player fighting game with keyboard controls.
+        </p>
+        <ul>
+          <li>Health bars + win/lose conditions</li>
+          <li>Attacks with distance checks / cooldowns</li>
+          <li>Character selection or UI elements (only include what’s true)</li>
+        </ul>
+
+        <div class="gallery">
+          <img src="images/PLACEHOLDER-game-1.jpg" alt="Game screenshot placeholder">
+          <img src="images/PLACEHOLDER-game-2.jpg" alt="Game screenshot placeholder">
+          <img src="images/PLACEHOLDER-game-3.jpg" alt="Game screenshot placeholder">
+        </div>
+
+        <div class="placeholder">
+          Add more screenshots by duplicating the <code>&lt;img&gt;</code> lines above.
+        </div>
+      </section>
+
+      <!-- Project 2 -->
+      <section class="proj">
+        <h2>Motorized Cardboard Eagle (Engineering Build)</h2>
+        <div class="meta">
+          <span class="tag">Tools: Building</span>
+          <span class="tag">Tools: Motors</span>
+          <span class="tag">Tools: Electronics/Coding</span>
+        </div>
+        <p style="margin-bottom:10px;color:var(--muted);">
+          What it is: A large cardboard eagle with moving parts.
+        </p>
+        <ul>
+          <li>Motorized motion (head/wing/tail/etc.)</li>
+          <li>Designed for visual impact + mechanical reliability</li>
+        </ul>
+
+        <div class="gallery">
+          <img src="images/PLACEHOLDER-eagle-1.jpg" alt="Eagle photo placeholder">
+          <img src="images/PLACEHOLDER-eagle-2.jpg" alt="Eagle photo placeholder">
+          <img src="images/PLACEHOLDER-eagle-3.jpg" alt="Eagle photo placeholder">
+        </div>
+      </section>
+
+      <!-- Project 3 -->
+      <section class="proj">
+        <h2>Onshape CAD Design Showcase</h2>
+        <div class="meta">
+          <span class="tag">Tools: Onshape</span>
+          <span class="tag">CAD</span>
+        </div>
+        <p style="margin-bottom:10px;color:var(--muted);">
+          What it is: A simple CAD design showcase.
+        </p>
+
+        <div class="gallery">
+          <img src="images/PLACEHOLDER-cad-1.jpg" alt="CAD screenshot placeholder">
+          <img src="images/PLACEHOLDER-cad-2.jpg" alt="CAD screenshot placeholder">
+          <img src="images/PLACEHOLDER-cad-3.jpg" alt="CAD screenshot placeholder">
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      Email: nchao@browning.edu |
+      <a href="https://github.com/CSE-10-C/Nates-Class-Repository">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>

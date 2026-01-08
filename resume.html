@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nate Chao | Resume</title>
+
+  <style>
+    :root{--bg:#0f172a;--panel:rgba(255,255,255,.06);--border:rgba(255,255,255,.12);--text:#e5e7eb;--muted:#9ca3af;--accent:#38bdf8;--radius:16px;--shadow:0 20px 60px rgba(0,0,0,.35)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1100px,92%);margin:auto}
+    .topbar{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(15,23,42,.72);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{font-weight:800}
+    .links a{margin-left:18px;color:var(--muted);padding:8px 10px;border-radius:10px;transition:.18s}
+    .links a:hover{color:var(--text);background:rgba(255,255,255,.06);transform:translateY(-1px)}
+    .page{padding:70px 0}
+    .panel{border:1px solid var(--border);background:rgba(255,255,255,.06);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    h1{margin:0 0 8px;font-size:38px}
+    .headerline{color:var(--muted);line-height:1.7}
+    .section{margin-top:22px;padding-top:18px;border-top:1px solid var(--border)}
+    h2{margin:0 0 10px;font-size:18px}
+    ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
+    .pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    .pill{padding:8px 12px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.05);color:var(--muted)}
+    .img-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:14px}
+    .img-grid img{width:100%;height:190px;object-fit:cover;border-radius:14px;border:1px solid var(--border);background:rgba(255,255,255,.04)}
+    footer{border-top:1px solid var(--border);padding:30px 0;margin-top:70px;color:var(--muted)}
+    footer a{color:#cfefff}
+    footer a:hover{text-decoration:underline}
+  </style>
+</head>
+
+<body>
+  <!-- NAV -->
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">Nate Chao</div>
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <div class="panel">
+      <h1>Resume</h1>
+      <div class="headerline">
+        <strong>Nate Chao</strong><br>
+        Email: nchao@browning.edu<br>
+        GitHub: <a href="https://github.com/CSE-10-C/Nates-Class-Repository">CSE-10-C/Nates-Class-Repository</a>
+      </div>
+
+      <div class="section">
+        <h2>Education</h2>
+        <ul>
+          <li>Browning School — 10th Grade Student and Representative</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Clubs & Activities</h2>
+        <ul>
+          <li>Debate</li>
+          <li>Robotics</li>
+          <li>Green Team</li>
+          <li>Varsity Track & Field</li>
+          <li>Varsity Cross Country</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Awards & Certifications</h2>
+        <ul>
+          <li>Grade 8 Engineering Award</li>
+          <li>Grade 8 Art Award</li>
+          <li>Columbia University — Certificate of Completion (Python Programming)</li>
+          <li>Multiple Varsity Track & Field MVP awards + co-captain roles</li>
+          <li>Multiple Varsity Cross Country MVP awards + co-captain roles</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Volunteer Experience</h2>
+        <ul>
+          <li>Intrepid Museum — Volunteered at a sporting event (earlier this year)</li>
+          <li>Ironstrength fitness event — helped manage/organize sponsorships, took photos for social media, and led workouts</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Selected Projects</h2>
+        <ul>
+          <li>1v1 Fighting Game (Pygame) — built core mechanics + gameplay systems</li>
+          <li>Motorized Cardboard Eagle — engineering build with motion + electronics/coding elements</li>
+          <li>Motorized Cardboard Dog — engineering build with motion + electronics/coding elements</li>
+          <li>NC State University 6-foot painted banner — lead artist</li>
+        </ul>
+
+        <div class="pill-row">
+          <div class="pill">Add more projects here</div>
+          <div class="pill">Or link to projects page</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Resume Images / Certificates (Optional)</h2>
+        <ul>
+          <li>Add photos of certificates, awards, posters, etc.</li>
+        </ul>
+
+        <div class="img-grid">
+          <img src="images/PLACEHOLDER-resume-1.jpg" alt="Resume image placeholder">
+          <img src="images/PLACEHOLDER-resume-2.jpg" alt="Resume image placeholder">
+          <img src="images/PLACEHOLDER-resume-3.jpg" alt="Resume image placeholder">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      Email: nchao@browning.edu |
+      <a href="https://github.com/CSE-10-C/Nates-Class-Repository">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>
