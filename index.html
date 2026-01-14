@@ -19,8 +19,14 @@
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
+
+    /* Push footer to bottom */
     body{
       margin:0;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+
       font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
       background:
         radial-gradient(900px 450px at 15% 10%, rgba(56,189,248,.18), transparent 55%),
@@ -28,9 +34,13 @@
         var(--bg);
       color:var(--text);
     }
+
+    main{flex:1}
+
     a{color:inherit;text-decoration:none}
     .container{width:min(1100px,92%);margin:auto}
     .section{padding:70px 0}
+
     .topbar{
       position:sticky;top:0;z-index:50;
       backdrop-filter: blur(12px);
@@ -56,9 +66,7 @@
     }
 
     /* HERO */
-    .hero{
-      padding:80px 0 30px;
-    }
+    .hero{padding:80px 0 30px}
     .hero-card{
       border:1px solid var(--border);
       background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
@@ -110,7 +118,7 @@
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap:18px;
-      justify-items:%20stretch;
+      justify-items:stretch; /* FIXED */
     }
     .card{
       border:1px solid var(--border);
@@ -136,22 +144,13 @@
     .card-body{padding:14px 14px 16px}
     .card h3{margin:0 0 8px;font-size:18px}
     .card p{margin:0;color:var(--muted);line-height:1.5}
-    
-    .card video {
-      width: 100%;
-      height: 170px;
-      object-fit: cover;
-      display: block;
-      border-bottom: 1px solid var(--border);
-    }
-    /* Placeholders you can duplicate */
-    .placeholder{
-      border:1px dashed rgba(255,255,255,.22);
-      border-radius: var(--radius);
-      padding:16px;
-      color:var(--muted);
-      background: rgba(255,255,255,.03);
-      margin-top:14px;
+
+    .card video{
+      width:100%;
+      height:170px;
+      object-fit:cover;
+      display:block;
+      border-bottom:1px solid var(--border);
     }
 
     footer{
@@ -162,6 +161,7 @@
     }
     footer a{color:#cfefff}
     footer a:hover{text-decoration:underline}
+
     /* HERO split layout */
     .hero-split{
       display:flex;
@@ -169,22 +169,13 @@
       justify-content:space-between;
       gap:32px;
     }
-
-    /* Left text column */
-    .hero-left{
-      flex:1;
-      min-width:280px;
-    }
-
-    /* Right portrait column */
+    .hero-left{flex:1;min-width:280px}
     .hero-right{
       flex:0 0 340px;
       display:flex;
       justify-content:center;
       align-items:center;
     }
-
-    /* Portrait styling */
     .hero-portrait{
       width:340px;
       height:340px;
@@ -194,27 +185,15 @@
       box-shadow:0 25px 70px rgba(0,0,0,.45);
     }
 
-    /* Mobile responsiveness */
     @media (max-width:900px){
-      .hero-split{
-        flex-direction:column;
-        align-items:flex-start;
-      }
-      .hero-right{
-        width:100%;
-        justify-content:flex-start;
-        margin-top:20px;
-      }
-      .hero-portrait{
-        width:min(360px,100%);
-        height:auto;
-        aspect-ratio:1/1;
-      }
-}
+      .hero-split{flex-direction:column;align-items:flex-start}
+      .hero-right{width:100%;justify-content:flex-start;margin-top:20px}
+      .hero-portrait{width:min(360px,100%);height:auto;aspect-ratio:1/1}
+    }
   </style>
 </head>
-<body>
 
+<body>
   <!-- NAV (shared) -->
   <header class="topbar">
     <div class="container nav">
@@ -229,99 +208,99 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <main class="container hero">
-    <div class="hero-card hero-split">
+  <main>
+    <!-- HERO -->
+    <section class="container hero">
+      <div class="hero-card hero-split">
+        <!-- LEFT SIDE (TEXT) -->
+        <div class="hero-left">
+          <div class="tagline">Student | Runner | Builder</div>
+          <h1>Nate Chao</h1>
+          <p class="sub">10th Grade • Browning School</p>
 
-      <!-- LEFT SIDE (TEXT) -->
-      <div class="hero-left">
-        <div class="tagline">Student | Runner | Builder</div>
-        <h1>Nate Chao</h1>
-        <p class="sub">10th Grade • Browning School</p>
+          <p class="hero-text">
+            I’m Nate Chao, a 10th-grade student and class representative at The Browning School.
+            I combine competitive running with coding and hands-on building projects. This site
+            highlights my background, skills, and a few projects I’ve built.
+          </p>
 
-        <p class="hero-text">
-          I’m Nate Chao, a 10th-grade student and class representative at The Browning School.
-          I combine competitive running with coding and hands-on building projects. This site
-          highlights my background, skills, and a few projects I’ve built.
-        </p>
+          <div class="btn-row">
+            <a class="btn primary" href="resume.html">View Resume</a>
+            <a class="btn" href="projects.html">See Projects</a>
+            <a class="btn" href="skills.html">Skills</a>
+          </div>
+        </div>
 
-        <div class="btn-row">
-          <a class="btn primary" href="resume.html">View Resume</a>
-          <a class="btn" href="projects.html">See Projects</a>
-          <a class="btn" href="skills.html">Skills</a>
+        <!-- RIGHT SIDE (PORTRAIT) -->
+        <div class="hero-right">
+          <img
+            class="hero-portrait"
+            src="images/portrait.jpg"
+            alt="Portrait of Nate Chao"
+          />
         </div>
       </div>
+    </section>
 
-      <!-- RIGHT SIDE (PORTRAIT) -->
-      <div class="hero-right">
-        <img
-          class="hero-portrait"
-          src="images/portrait.jpg"
-          alt="Portrait of Nate Chao"
-        />
+    <!-- QUICK HIGHLIGHTS -->
+    <section class="section container">
+      <h2 style="margin:0 0 10px;">Quick Highlights</h2>
+      <p style="margin:0;color:var(--muted);max-width:760px;line-height:1.6;">
+        A snapshot of what I do across athletics, computer science, engineering/design, and student life.
+      </p>
+
+      <div class="grid" style="margin-top:18px;">
+        <article class="card">
+          <img src="images/cross-country-team.jpeg" alt="Athletics placeholder">
+          <div class="card-body">
+            <h3>Athletics</h3>
+            <p>Varsity Track &amp; Field + Cross Country; leadership/captain roles.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/github-code.jpg" alt="Computer science placeholder">
+          <div class="card-body">
+            <h3>Computer Science</h3>
+            <p>Python programming; data handling + visualization tools.</p>
+            <p style="margin-top:10px;">
+              <a href="https://github.com/CSE-10-C/Nates-Class-Repository">My GitHub Code</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <video
+            src="videos/cse-final.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+          ></video>
+          <div class="card-body">
+            <h3>Engineering &amp; Design</h3>
+            <p>Building projects, motors/electronics, and art/design work.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/paddle.jpeg" alt="Art placeholder">
+          <div class="card-body">
+            <h3>Art</h3>
+            <p>Drawing, painting, and cardboard builds.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="images/robotics-team.jpeg" alt="Clubs placeholder">
+          <div class="card-body">
+            <h3>Clubs</h3>
+            <p>Debate, robotics, green team; voted class representative.</p>
+          </div>
+        </article>
       </div>
-
-    </div>
-</main>
-
-  <!-- QUICK HIGHLIGHTS -->
-  <section class="section container">
-    <h2 style="margin:0 0 10px;">Quick Highlights</h2>
-    <p style="margin:0;color:var(--muted);max-width:760px;line-height:1.6;">
-      A snapshot of what I do across athletics, computer science, engineering/design, and student life.
-    </p>
-
-    <div class="grid">
-      <!-- Replace image src with your real images -->
-      <article class="card">
-        <img src="images/cross-country-team.jpeg" alt="Athletics placeholder">
-        <div class="card-body">
-          <h3>Athletics</h3>
-          <p>Varsity Track & Field + Cross Country; leadership/captain roles.</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="images/github-code.jpg" alt="Computer science placeholder">
-        <div class="card-body">
-          <h3>Computer Science</h3>
-          <p>Python programming; data handling + visualization tools.</p>
-        <a href="https://github.com/CSE-10-C/Nates-Class-Repository">My GitHub Code</a>
-        </div>
-      </article>
-
-      <!-- ENGINEERING & DESIGN (VIDEO) -->
-      <article class="card">
-        <video
-          src="videos/cse-final.mp4"
-          autoplay
-          loop
-          muted
-          playsinline
-        ></video>
-
-        <div class="card-body">
-          <h3>Engineering &amp; Design</h3>
-          <p>Building projects, motors/electronics, and art/design work.</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="images/paddle.jpeg" alt="Art placeholder">
-        <div class="card-body">
-          <h3>Art</h3>
-          <p>Drawing, painting, and cardboard builds.</p>
-        </div>
-      </article>
-
-      <article class="card">
-        <img src="images/robotics-team.jpeg" alt="Clubs placeholder">
-        <div class="card-body">
-          <h3>Clubs</h3>
-          <p>Debate, robotics, green team; voted class representative.</p>
-        </div>
-      </article>    
-
+    </section>
+  </main>
 
   <!-- FOOTER (shared) -->
   <footer>
@@ -330,6 +309,5 @@
       <a href="https://github.com/CSE-10-C/Nates-Class-Repository">GitHub</a>
     </div>
   </footer>
-
 </body>
 </html>
