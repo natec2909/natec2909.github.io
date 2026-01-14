@@ -27,7 +27,7 @@
     ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9}
     .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:14px}
 
-    /* ✅ CHANGED: make the same styling work for BOTH images and videos */
+    /* Same styling for BOTH images and videos */
     .gallery img,
     .gallery video{
       width:100%;
@@ -42,8 +42,11 @@
     .gallery img:hover,
     .gallery video:hover{transform:scale(1.03)}
 
-    /* Optional: removes iOS fullscreen auto behavior on some taps */
-    .gallery video{playsinline: true;}
+    /* ✅ FIX #1: This was invalid CSS: `.gallery video{playsinline: true;}` — removed. */
+    /* ✅ FIX #2: Force poster to show by NOT preloading frames that can appear black */
+    .gallery video{
+      background: transparent; /* makes poster look clean */
+    }
 
     .placeholder{border:1px dashed rgba(255,255,255,.22);border-radius:14px;padding:16px;color:var(--muted);background:rgba(255,255,255,.03);margin-top:14px}
     footer{border-top:1px solid var(--border);padding:30px 0;margin-top:70px;color:var(--muted)}
@@ -85,14 +88,14 @@
         <ul>
           <li>Health bars + win/lose conditions</li>
           <li>Attacks with distance checks / cooldowns</li>
-          <li>Character selection and UI elements </li>
+          <li>Character selection and UI elements</li>
         </ul>
 
         <div class="gallery">
           <img src="images/pygame1.jpg" alt="Game screenshot placeholder">
 
-          
-          <video controls muted playsinline preload="metadata" poster="images/pygame-video-poster.jpg">
+          <!-- ✅ COVER: poster + preload none (more reliable than metadata) -->
+          <video controls playsinline preload="none" poster="images/pygame-video-poster.jpg">
             <source src="videos/2d-fighter-demo.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -120,8 +123,8 @@
         <div class="gallery">
           <img src="images/eagle1.jpg" alt="Eagle photo placeholder">
 
-          
-          <video controls muted playsinline preload="metadata" poster="images/eagle-video-poster.jpg">
+          <!-- ✅ COVER -->
+          <video controls playsinline preload="none" poster="images/eagle-video-poster.jpg">
             <source src="videos/cse-final.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -163,8 +166,8 @@
         <div class="gallery">
           <img src="images/best-overall.jpg" alt="Winning Team">
 
-          
-          <video controls muted playsinline preload="metadata" poster="images/bias-video-poster.jpg">
+          <!-- ✅ COVER -->
+          <video controls playsinline preload="none" poster="images/bias-video-poster.jpg">
             <source src="videos/hackathon-vid.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -185,7 +188,7 @@
           This project is a large cardboard dog with moving parts that waves its arm when you wave it at and displays a message on a microbit. The dog’s face was hand-painted, and the project required a diverse skill set including coding, wire management, ingenuity, innovation, and artistic skills.
         </p>
         <ul>
-          <li>Motorized motion (Tail & Arm)</li>
+          <li>Motorized motion (Tail &amp; Arm)</li>
           <li>Designed for visual impact + mechanical reliability</li>
         </ul>
 
