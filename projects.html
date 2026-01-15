@@ -162,6 +162,7 @@
       <h1>Projects</h1>
       <p>Selected projects across programming, engineering builds, and design.</p>
 
+      
       <!-- Project 1 -->
       <section class="proj">
         <h2>Pygame 1v1 Fighting Game</h2>
@@ -181,8 +182,25 @@
         <div class="gallery">
           <img src="images/pygame1.jpg" alt="Game screenshot placeholder">
 
-          
-          <img src="images/matplotlib.jpeg" alt="Game screenshot placeholder">
+          <!-- ✅ YouTube-style cover video -->
+          <div class="yt-video">
+            <div class="yt-thumb"
+                 style="--thumb:url('images/fighter-page.jpg')"
+                 data-title="2D Fighter Demo"
+                 data-duration="0:30">
+              <div class="yt-title">2D Fighter Demo</div>
+              <div class="yt-duration">0:30</div>
+              <div class="yt-play">
+                <div class="circle"><div class="triangle"></div></div>
+              </div>
+            </div>
+
+            <video class="yt-player" playsinline preload="none" controls>
+              <source src="videos/fighter-game.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
           <img src="images/pygame3.jpg" alt="Game screenshot placeholder">
         </div>
       </section>
